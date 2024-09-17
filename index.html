@@ -10,6 +10,196 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="app">
+      <main>
+        <div class="container-main">
+            <span class="icone-voltar"><img src="assets/icons/arrow-left-02.svg" alt="">Voltar</span>
+            <h1>Formulario de matricula</h1>
+            <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+            <form>
+              <fieldset>
+                <legend>Informações da criança</legend>
+    
+                <div class="input-item">
+                  <label for="name">Nome conpleto</label>
+                  <input name="name" id="name" placeholder="Nome da criança" type="text">
+                </div>
+    
+                <div class="input-item">
+                  <label for="date">Data de nascimento</label>
+                  <input name="date" id="date" type="date">
+                </div>
+    
+                <div class="select-item">
+                  <label for="sexo">Sexo</label>
+                  <select name="sexo" id="sexo">
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                      <option value="nan">Prefiro não dizer</option>
+                  </select>
+                </div>
+    
+                <div class="textarea-item">
+                  <label for="description">Informações Médicas</label>
+                  <textarea placeholder="Possui algum problema medico se (sim), especifique" name="description" cols="30" rows="10" id="description">
+                    
+                  </textarea>
+                </div>
+
+                <div class="file-item">
+                  <label for="file">Certidao de nascimento</label>
+                  <div class="file-certidao">
+                    <img src="assets/icons/cloud-upload.svg" alt="">
+                    <input name="file"  type="file">
+                    <p>Clique aqui <br>
+                      para selecionar os arquivos
+                    </p>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="endereco">
+                <legend>Endereço residencial</legend>
+
+                <div class="input-item">
+                  <label for="cep">CEP</label>
+                  <input id="cep" name="cep" type="text">
+                </div>
+
+                <div class="flex">
+                  <div class="input-item flex2">
+                    <label for="Rua">Rua</label>
+                    <input value="Rua das Flores" disabled id="rua" name="rua" type="text">
+                  </div>
+                  <div class="input-item flex1">
+                    <label for="numero">Numero</label>
+                    <input id="numero" name="numero" type="number">
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div class="input-item fle2">
+                    <label for="cidade">Cidade</label>
+                    <input value="São Paulo" disabled id="cidade" name="cidade" type="text">
+                  </div>
+                  <div class="input-item flex1">
+                    <label for="estado">Estado</label>
+                    <input id="estado" value="São Paulo" disabled name="estado" type="text">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="responsavel">
+                <legend>Informações do responsavel</legend>
+
+                <div class="input-item">
+                  <label for="guardiao">Nome do responsável</label>
+                  <input name="guardiao" id="guardiao" type="text">
+                  <small>Principal responsável legal e contato de emergência</small>
+                </div>
+
+                <div class="input-item">
+                  <label for="telefone">Telefone</label>
+                  <input  placeholder="(44) 99706-0488" id="telefone" name="telefone" type="tel">
+                </div>
+
+                <div class="input-item">
+                  <label for="email">Email</label>
+                  <input  placeholder="email@gmail.com" required id="email" name="email" type="email">
+                  <div class="error">
+                    <img src="assets/icons/alert-circle.png" alt=""><span>Insira um email válido</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="type-matricula">
+                <legend>Opacao de matrícula</legend>
+                <div class="input-item">
+                  <label for="">Selecione o turno de estudo</label>
+
+                  <div class="input-radio">
+                    <div class="radio-inner">
+                      <div class="radio-imagem">
+                      </div>
+                        <input id="manha" name="periodo"  type="radio">
+                        <img src="assets/icons/sun-cloud-02.png" alt="">
+                        <label for="manha">Manhã</label>
+                    
+                    </div>
+                    <div class="radio-inner">
+                      <div class="radio-imagem">
+                      </div>
+                        <input id="tarde" name="periodo"  type="radio">
+                        <img src="assets/icons/sun-02.png" alt="">
+                        <label for="tarde">Tarde</label>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+
+                <div class="input-item">
+                  <label for="">Em qual esporte você gostaria de inscrever o seu filho</label>
+                  <div class="input-radio">
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="football" type="radio">
+                      <img src="assets/icons/football.png" alt="">
+                      <label for="football">Footebol</label>
+                    </div>
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="volleyball" type="radio">
+                      <img src="assets/icons/volleyball.png" alt="">
+                      <label for="volleyball">Volleyball</label>
+                    </div>
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="basketball" type="radio">
+                      <img src="assets/icons/basketball-02.png" alt="">
+                      <label  for="basketball">Basketball</label>
+                    </div>
+
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="natacao" type="radio">
+                      <img src="assets/icons/swimming.png" alt="">
+                      <label  for="natacao">Natação</label>
+                    </div>
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="Yoga" type="radio">
+                      <img src="assets/icons/yoga-02.png" alt="">
+                      <label  for="Yoga">Yoga</label>
+                    </div>
+                    <div class="radio-inner">
+                      <div class="radio-imagem"></div>
+                      <input name="sports" id="box" type="radio">
+                      <img src="assets/icons/boxing-glove-01.png" alt="">
+                      <label  for="box">Box</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="button">
+                <button class="btn-sencodary">Salvar respostas</button>
+                <button class="btn-primary">Fazer matrícula</button>
+              </div>
+            </form>
+        </div>
+      </main>
+    
+      <aside>
+        <div class="container-aside">
+          <header>
+            <p><img src="assets/Frame 48095957.png" alt="">Estrela da manhã</p>
+            <h2>Porque cada momento de <span>aparendizado</span> conta </h2>
+            <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+            <img src="assets/Illustration.png" alt="">
+          </header>
+        </div>
+      </aside>
+  </div>
 </body>
 </html>
