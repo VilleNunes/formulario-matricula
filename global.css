@@ -40,7 +40,19 @@ img{
 .flex1{
   flex: 1;
 }
-
+.display{
+  display: block;
+}
 .flex2{
   flex: 2;
+}
+
+@media(width <= 391px){
+  .flex{
+    display: block;
+  }
+
+  .display{
+    display: none;
+  }
 }

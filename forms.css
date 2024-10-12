@@ -218,4 +218,17 @@ button{
   }
 }
 
+@media(width <= 391px){
+  .button{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-sencodary , .btn-primary{
+    margin: 0px !important;
+    text-align: center;
+  }
+  
+
+}
+
 
